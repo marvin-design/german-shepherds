@@ -1,0 +1,37 @@
+body {
+    background-color: #F5F5DC; /* Soft Cream */
+    color: #5D4037; /* Deep Brown for text */
+}
+
+h1, h2 {
+    color: #4CAF50; /* Forest Green for headings */
+}
+
+button {
+    background-color: #D7CCC8; /* Warm Beige */
+    color: #5D4037; /* Deep Brown */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5D4037; /* Darker Brown on hover */
+    color: #F5F5DC; /* Light text */
+}
+#head{
+    text-align: center;
+    text-decoration: underline;
+}
+#dogform{
+    width: 300px;
+    margin: auto; /* Centers horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #5D4037; /* Optional styling */
+    background-color: #F5F5DC; /* Optional background */
+    border-radius: 10px;
+}

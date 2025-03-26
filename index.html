@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Kennels</title>
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/png" href="images/number.webp">
 </head>
 <body>
     <header>
-        <h1 id="head">Wecome to the German Shepherd world</h1>
+        <h1 id="head"><strong>Welcome to the German Shepherd world</strong></h1>
     </header>
-    <div id="sub-head">
-        <h2>Did You Know??</h2>
+    <div>
+        <h2 id="sub-head">Did You Know??</h2>
         <ul id="list">
             <li><strong>They Were Originally Herding Dogs</strong> – Despite their popularity in police and military work, GSDs were initially bred for herding sheep.</li>
 
@@ -36,7 +36,12 @@
         </ul>
     </div>
     <div>
-        
-    </div>
+        <form id="dogForm">
+            <label for="dogName">Dog Name:</label>
+            <input type="text" id="dogName" name="dogName" required>
+            <button id="btn" type="submit">Submit</button>
+        </form>
+     </div>
+
 </body>
 </html>
