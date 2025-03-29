@@ -1,82 +1,98 @@
+/* General Page Styles */
 body {
     background-color: #F5F5DC; /* Soft Cream */
     color: #5D4037; /* Deep Brown for text */
     margin: 0;
-    display: block;
     font-family: Arial, sans-serif;
 }
 
+/* Headings */
 h1, h2 {
-    color: #4CAF50; /* Forest Green for headings */
+    color: #4CAF50; /* Forest Green */
+    font-size: 26px; /* Bigger text */
+    text-align: center;
 }
 
-button {
-    background-color: #D7CCC8; /* Warm Beige */
-    color: #5D4037; /* Deep Brown */
-    border: 2px solid #5D4037; /* Box-like outline */
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #5D4037; /* Darker Brown on hover */
-    color: #F5F5DC; /* Light text */
-}
-
+/* Center the main heading */
 #head {
     text-align: center;
     text-decoration: underline;
+    font-size: 32px; /* Bigger heading */
 }
 
-#image {
-    width: 250px;
-    height: 250px;
+/* Dog Cards Container */
+#dogContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Dog Card */
+.dog-card {
+    background-color: #D7CCC8; /* Warm Beige */
+    color: #5D4037;
+    border: 2px solid #5D4037;
+    padding: 15px;
     border-radius: 10px;
-    display: block;
-    margin: 10px auto; /* Center image */
+    text-align: center;
+    width: 200px;
+    height: 260px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.characterInfo {
+/* Expand Effect When Clicked */
+.dog-card.expanded {
+    width: 300px;
     height: auto;
     padding: 20px;
-    font-size: 20px;
-    border: 3px dotted #5D4037; /* Dotted border */
-    text-align: center; /* Center title and image */
+}
+
+/* Dog Image in Card */
+.dog-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center it */
-    width: 50%;
 }
 
-/* Left-Align Only the Facts List */
-#detailed-info ul {
-    text-align: left;
-    list-style-type: disc; /* Bulleted list */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    width: fit-content; /* Keeps it nicely aligned */
+/* Name inside the Card */
+.dog-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
-/* Buttons for dog selection */
-#dogNames {
-    display: flex;
-    justify-content: center; /* Center the buttons */
+/* Facts Section */
+.dog-card .card-back {
+    display: none;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    gap: 10px; /* Add space between buttons */
-    width: fit-content;
-    margin: 0 auto; /* Center the buttons on the page */
+}
+
+/* Show Facts on Expansion */
+.dog-card.expanded .card-back {
+    display: flex;
+}
+
+/* Facts List */
+#facts-list {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    width: 100%;
 }
 
 /* Fact List Styling */
 #facts-list li {
     display: flex;
-    justify-content: space-between; /* Push remove button to the end */
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border-bottom: 1px solid #ccc; /* Optional: Adds a divider */
+    border-bottom: 1px solid #ccc;
 }
 
 /* Remove Fact Button */
@@ -96,16 +112,18 @@ button:hover {
 }
 
 /* Input and Add Fact Button */
-#new-fact {
-    width: 80%;
-    padding: 10px;
+.fact-input {
+    width: 90%;
+    padding: 8px;
     margin-top: 10px;
     border: 1px solid #5D4037;
     border-radius: 5px;
 }
 
-#add-fact-btn {
+/* Add Fact Button */
+.add-fact-btn {
     display: block;
+    width: 100%;
     margin-top: 10px;
     background-color: #4CAF50;
     color: white;
@@ -113,8 +131,9 @@ button:hover {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-#add-fact-btn:hover {
+.add-fact-btn:hover {
     background-color: #388E3C;
 }
