@@ -93,6 +93,7 @@ h1, h2 {
     align-items: center;
     padding: 5px;
     border-bottom: 1px solid #ccc;
+    
 }
 
 /* Remove Fact Button */
@@ -136,4 +137,7 @@ h1, h2 {
 
 .add-fact-btn:hover {
     background-color: #388E3C;
+}
+#list{
+    font-size: larger;
 }
